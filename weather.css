@@ -1,0 +1,257 @@
+/* Reset some default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #3bc7d1;
+    background: linear-gradient(to right, #ccdf7e, #3cd7e2, #21a0a9);
+
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+/* Container for city details */
+#city-outer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    gap: 100px; /* Improved spacing between items */
+
+}
+
+/* Search bar section */
+#search {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+#search:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Hover effect */
+}
+
+/* Search icon */
+#location {
+    height: 21px;
+    width: 17px;
+    background-image: url('weather-app-img/images/search.png');
+    background-size: cover;
+    margin-left: 10px; /* Slight spacing adjustment */
+}
+#location:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #333;
+}
+#location:active{
+    cursor: pointer;
+    transform: scale(1);
+    color: gainsboro;
+}
+
+/* City name styling */
+#city {
+    font-size: 10vh;
+    font-weight: 550;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease; /* Add transition to color */
+}
+
+#city:hover {
+    color: #010e0b; /* Subtle hover color change */
+}
+
+
+/* Search input styling */
+#name {
+    height: 40px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 30px;
+   border: none;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Main content sections */
+#body1 {
+    position: relative;
+    overflow: hidden;
+}
+#body1 {
+    height: 70vh;
+   
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #8ef0ff;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#body1 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensures the video covers the entire div */
+    z-index: -1; /* Places video behind the content */
+    opacity: 0.7;
+}
+
+#body1:hover {
+    transform: translateY(-5px); /* Add a lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    
+}#body1:hover #temp{
+    color: #ecf0f1;
+}
+#body1:hover #below-h{
+    color: #ecf0f1;
+}
+
+/* Other details section */
+#other-details {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #090f3fa3;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #f5f5f5;
+    transition: box-shadow 0.3s ease;
+}
+
+#other-details:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings styling */
+#temp {
+    font-size: 11vh;
+    font-weight: 700;
+    color: #34495e;
+    text-transform: capitalize;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+#below-h{
+   text-align: center;
+font-size:15px
+}
+
+h1:hover {
+    color: #e74c3c;
+}
+
+/* Icons styling */
+#img1, #img2 {
+    margin-top: 20px;
+    height: 90px;
+    width: 90px;
+    background-size: cover;
+    background-position: center;
+  ; /* Rounded icons */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#img1:hover, #img2:hover {
+    transform: scale(1.1); /* Slight scaling effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+#img1{
+    background-image:url('weather-app-img/images/wind.png'); 
+    background-size: cover;
+}
+#img2{
+    background-image:url('weather-app-img/images/humidity.png'); 
+    background-size: cover;
+}
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    #city-outer{
+        gap: 10px;
+    }
+    #city {
+        font-size: 6vh;
+    }
+    
+    h1 {
+        font-size: 8vh;
+    }
+
+    #name {
+        width: 200px;
+        font-size: 0.9rem;
+    }
+
+    #city-outer {
+        flex-direction: column;
+    }
+
+    #body1, #body2 {
+        height: 50vh;
+        margin: 10px;
+    }
+}
+#wind-speed{
+    background-color:rgb(0,0,0,0.5);
+    text-align: center;
+    font-size: 3vmin;
+    padding: 10px;
+    border-radius: 3vh;
+   margin: 20px;
+}
+#humidity{
+    background-color:rgb(0,0,0,0.5);
+   text-align: center;
+    font-size: 3vmin;
+    padding: 10px;
+   
+    border-radius: 3vh;
+    margin: 20px;
+}
+
+
+#body1 video {
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1; /* Places video behind the content */
+}
+
+#display{
+    display: none;
+}
+

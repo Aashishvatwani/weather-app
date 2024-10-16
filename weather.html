@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div id="video">
+        <div id="city-outer">
+            <div id="city">Search The place</div>
+
+            <div id="search">
+                <input type="text" id="name" name="name" placeholder="Enter the city name">
+                <div id="location"></div>
+            </div>
+        </div>
+
+        <!-- Video added here inside #body1 -->
+         <div id="display">
+        <div id="body1">
+            <video autoplay loop muted playsinline id="weather-video">
+                <source src="clouds.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div id="temp">
+                21°c 
+               
+        </div>
+        <div id="below-h">Air-quality</div>
+        <div id="weather-icon"></div>
+        </div>
+
+        <div id="other-details">
+            <div id="wind-speed">
+                <div id="img1"></div>
+                <div id="text-wind-speed">21mph</div>
+            </div>
+            <div id="humidity"> 
+                <div id="img2"></div>
+                <div id="text-humadity"> 80%</div>
+            </div>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>
